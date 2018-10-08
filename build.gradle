@@ -38,6 +38,13 @@ group = "io.github.antany"
 archivesBaseName = "antutils"
 version = "0.0.1"
 
+sourceSets {
+  test {
+    resources {
+      srcDir "src/test/java"
+    }
+  }
+}
 
 uploadArchives {
   repositories {
