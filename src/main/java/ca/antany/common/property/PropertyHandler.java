@@ -9,11 +9,25 @@ import java.util.logging.Logger;
 
 import ca.antany.common.property.enums.PropertyType;
 
+/**
+ * 
+ * Simplify the way to add property file from classpath or filesystem
+ * and maintains one PropertyHandler object across project
+ * <p>
+ * <code>
+ * 
+ * PropertyHandler ph = PropertyHandler.getInstance(); <br>
+ * ph.addPropertyFile("app.properties", PropertyType.CLASSPATH); //loads app.properties from classpath<br>
+ * ph.get("key");<br>
+ * 
+ * </code>
+ * </p>
+ * @author antany
+ * @since 0.0.1
+ */
 public class PropertyHandler extends Properties {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	
 	
