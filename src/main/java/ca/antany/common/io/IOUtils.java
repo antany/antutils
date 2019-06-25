@@ -11,7 +11,9 @@ public class IOUtils {
 	
 	public static void close(Closeable object) {
 		try {
-			object.close();
+			if(object!=null) {
+				object.close();
+			}
 		} catch (IOException e) {
 			logger.log(Level.SEVERE,e,null);
 		}
